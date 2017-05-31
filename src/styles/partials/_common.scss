@@ -1,0 +1,6 @@
+body, html {
+  font-size: $font-size;
+  @media all and (max-width: 768px) {
+    font-size: 12px;
+  }
+}

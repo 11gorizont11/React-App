@@ -1,0 +1,235 @@
+@font-face {
+  font-family: 'GothamLight';
+  src: url("./fonts/GothamLight.eot");
+  src: url("./fonts/GothamLight.eot?#iefix") format("embedded-opentype"), url("./fonts/GothamLight.woff") format("woff"), url("./fonts/GothamLight.ttf") format("truetype"), url("./fonts/GothamLight.svg#GothamLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GothamBook';
+  src: url("./fonts/GothamBook.eot");
+  src: url("./fonts/GothamBook.eot?#iefix") format("embedded-opentype"), url("./fonts/GothamBook.woff") format("woff"), url("./fonts/GothamBook.ttf") format("truetype"), url("./fonts/GothamBook.svg#GothamLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body, html {
+  font-size: 14px; }
+  @media all and (max-width: 768px) {
+    body, html {
+      font-size: 12px; } }
+
+.homeSection {
+  background-image: url("/images/startViewBg.png");
+  background-position: top center;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  overflow: auto;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1) {
+    .homeSection {
+      background-image: url("/images/startViewBg@2x.png"); } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1) {
+    .homeSection {
+      background-image: url("/images/startViewBg@3x.png"); } }
+  .homeSection .contentWrap {
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    max-width: 775px;
+    max-width: 55.35714rem;
+    font-size: 30px;
+    font-size: 2.14286rem;
+    padding-top: 145px;
+    padding-top: 10.35714rem;
+    padding-bottom: 50px;
+    padding-bottom: 3.57143rem; }
+    @media all and (max-width: 768px) {
+      .homeSection .contentWrap {
+        padding-top: 85px;
+        padding-top: 6.07143rem; } }
+    .homeSection .contentWrap h5, .homeSection .contentWrap h3 {
+      color: inherit;
+      font-family: "GothamLight", sans-serif;
+      font-size: 19px;
+      font-size: 1.35714rem;
+      margin-bottom: 0;
+      margin-top: 0; }
+    .homeSection .contentWrap h3 {
+      font-size: 27px;
+      font-size: 1.92857rem;
+      margin-top: 9px;
+      margin-top: 0.64286rem;
+      margin-bottom: 10px;
+      margin-bottom: 0.71429rem; }
+    .homeSection .contentWrap .simpleText {
+      padding-top: 42px;
+      padding-top: 3rem;
+      font-size: 19px;
+      font-size: 1.35714rem;
+      line-height: 21px;
+      line-height: 1.5rem;
+      color: inherit;
+      font-family: "GothamLight", sans-serif; }
+      .homeSection .contentWrap .simpleText.reducePad {
+        padding-top: 28px;
+        padding-top: 2rem;
+        margin: 0 auto;
+        max-width: 590px;
+        max-width: 42.14286rem;
+        width: 100%; }
+        .homeSection .contentWrap .simpleText.reducePad + img {
+          max-width: 365px;
+          max-width: 26.07143rem;
+          padding-top: 55px;
+          padding-top: 3.92857rem; }
+      .homeSection .contentWrap .simpleText + img {
+        max-width: 315px;
+        max-width: 22.5rem; }
+    .homeSection .contentWrap h1 {
+      color: inherit;
+      font-family: "Times New Roman", serif;
+      font-weight: bold;
+      font-size: 58px;
+      font-size: 4.14286rem;
+      margin-top: 115px;
+      margin-top: 8.21429rem;
+      margin-bottom: 40px;
+      margin-bottom: 2.85714rem; }
+    .homeSection .contentWrap img {
+      width: 80%;
+      max-width: 394px;
+      max-width: 28.14286rem;
+      padding-top: 31px;
+      padding-top: 2.21429rem; }
+    .homeSection .contentWrap .closeStart {
+      margin: 0 auto; }
+    .homeSection .contentWrap .roundedButton {
+      background: transparent;
+      border: 1px solid #ffffff;
+      border-radius: 50px;
+      border-radius: 3.57143rem;
+      color: #ffffff;
+      cursor: pointer;
+      display: block;
+      font-family: "GothamLight", sans-serif;
+      max-width: 295px;
+      max-width: 21.07143rem;
+      padding-top: 16px;
+      padding-top: 1.14286rem;
+      padding-bottom: 17px;
+      padding-bottom: 1.21429rem;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 78px;
+      margin-top: 5.57143rem;
+      text-decoration: none;
+      font-size: 20px;
+      font-size: 1.42857rem;
+      text-transform: uppercase;
+      width: 80%; }
+      .homeSection .contentWrap .roundedButton:hover {
+        border-color: #c1c45b; }
+    .homeSection .contentWrap .footerText {
+      font-family: "GothamBook", sans-serif;
+      font-size: 9px;
+      font-size: 0.64286rem;
+      padding-top: 60px;
+      padding-top: 4.28571rem;
+      color: inherit;
+      line-height: 1.5; }
+  .homeSection.fadeStart {
+    bottom: 100vh;
+    opacity: 0;
+    top: -100vh;
+    transition: all .2s; }
+
+.loadingPageWrap {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url("/images/LoadingPage-bg@2x.png");
+  background-size: cover;
+  text-align: center; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1) {
+    .loadingPageWrap {
+      background-image: url("/images/LoadingPage-bg@2x.png"); } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1) {
+    .loadingPageWrap {
+      background-image: url("/images/LoadingPage-bg@3x.png"); } }
+  .loadingPageWrap .loadingContentWrap {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    max-width: 890px;
+    max-width: 63.57143rem; }
+    .loadingPageWrap .loadingContentWrap .loadingTitle {
+      color: #ffffff;
+      font-family: "GothamLight", sans-serif;
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 27px;
+      font-size: 1.92857rem;
+      font-weight: 100;
+      line-height: 2.1; }
+      .loadingPageWrap .loadingContentWrap .loadingTitle:first-child {
+        padding-bottom: 7.2vh;
+        line-height: 1; }
+    .loadingPageWrap .loadingContentWrap .loaderWrap {
+      margin-bottom: 33vh;
+      padding: 5px;
+      padding: 0.35714rem;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#061d26+0,061d26+50,051a22+51,051a22+100 */
+      background: #061d26;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #061d26 0%, #061d26 50%, #051a22 51%, #051a22 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #061d26 0%, #061d26 50%, #051a22 51%, #051a22 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #061d26 0%, #061d26 50%, #051a22 51%, #051a22 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#061d26', endColorstr='#051a22',GradientType=0 );
+      /* IE6-9 */
+      border: 2px solid #ffffff; }
+      .loadingPageWrap .loadingContentWrap .loaderWrap #inner-loader {
+        height: 45px;
+        height: 3.21429rem;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#03b2ff+0,03b2ff+50,1ba1e3+51,1ba1e3+100 */
+        background: #03b2ff;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #03b2ff 0%, #03b2ff 50%, #1ba1e3 51%, #1ba1e3 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #03b2ff 0%, #03b2ff 50%, #1ba1e3 51%, #1ba1e3 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #03b2ff 0%, #03b2ff 50%, #1ba1e3 51%, #1ba1e3 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03b2ff', endColorstr='#1ba1e3',GradientType=0 );
+        /* IE6-9 */
+        border: none;
+        width: 0; }
+  .loadingPageWrap:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%; }
+
+.not-found {
+  color: #000;
+  display: table;
+  font-family: sans-serif;
+  font-size: 6.5rem;
+  height: 100%;
+  text-align: center;
+  width: 100%; }
+  .not-found .message {
+    display: table-cell;
+    vertical-align: middle; }

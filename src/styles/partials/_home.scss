@@ -1,0 +1,215 @@
+.homeSection {
+  background-image: url('/images/startViewBg.png');
+  background-position: top center;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  overflow: auto;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1) {
+    background-image: url('/images/startViewBg@2x.png');
+  }
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (   min--moz-device-pixel-ratio: 3),
+  only screen and (     -o-min-device-pixel-ratio: 3/1) {
+    background-image: url('/images/startViewBg@3x.png');
+  }
+
+  .contentWrap {
+    color: $title-color;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    @include px2rem(max-width, 775px);
+    @include px2rem(font-size, 30px);
+    @include px2rem(padding-top, 145px);
+    @include px2rem(padding-bottom, 50px);
+
+    @media all and (max-width: 768px) {
+      @include px2rem(padding-top, 85px);
+    }
+
+    h5, h3 {
+      color: inherit;
+      font-family: $text-font;
+      @include px2rem(font-size, 19px);
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    h3 {
+      @include px2rem(font-size, 27px);
+      @include px2rem(margin-top, 9px);
+      @include px2rem(margin-bottom, 10px);
+    }
+    .simpleText {
+      @include px2rem(padding-top, 42px);
+      @include px2rem(font-size, 19px);
+      @include px2rem(line-height, 21px);
+      color: inherit;
+      font-family: $text-font;
+
+      &.reducePad {
+        @include px2rem(padding-top, 28px);
+        margin: 0 auto;
+        @include px2rem(max-width, 590px);
+        width: 100%;
+
+        & + img {
+          @include px2rem(max-width, 365px);
+          @include px2rem(padding-top, 55px);
+        }
+      }
+
+      & + img {
+        @include px2rem(max-width, 315px);
+      }
+    }
+
+    h1 {
+      color: inherit;
+      font-family: $mainFont;
+      font-weight: bold;
+      @include px2rem(font-size, 58px);
+      @include px2rem(margin-top, 115px);
+      @include px2rem(margin-bottom, 40px);
+    }
+
+    img {
+      width: 80%;
+      @include px2rem(max-width, 394px);
+      @include px2rem(padding-top, 31px);
+    }
+    .closeStart {
+      margin: 0 auto;
+    }
+
+    .roundedButton{
+      background: transparent;
+      border: 1px solid #ffffff;
+      @include px2rem(border-radius, 50px);
+      color: #ffffff;
+      cursor: pointer;
+      display: block;
+      font-family: $text-font;
+      @include px2rem(max-width, 295px);
+      @include px2rem(padding-top, 16px);
+      @include px2rem(padding-bottom, 17px);
+      margin: 0 auto;
+      text-align: center;
+      @include px2rem(margin-top, 78px);
+      text-decoration: none;
+      @include px2rem(font-size, 20px);
+      text-transform: uppercase;
+      width: 80%;
+
+      &:hover {
+        border-color: $hoverColor;
+      }
+    }
+
+    .footerText {
+      font-family: $footerFont;
+      @include px2rem(font-size, 9px);
+      @include px2rem(padding-top, 60px);
+      color: inherit;
+      line-height: 1.5;
+    }
+  }
+
+  &.fadeStart {
+    bottom: 100vh;
+    opacity: 0;
+    top: -100vh;
+    transition: all .2s;
+  }
+}
+
+.loadingPageWrap {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('/images/LoadingPage-bg@2x.png');
+    background-size: cover;
+    text-align: center;
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1) {
+      background-image: url('/images/LoadingPage-bg@2x.png');
+    }
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 3),
+    only screen and (   min--moz-device-pixel-ratio: 3),
+    only screen and (     -o-min-device-pixel-ratio: 3/1) {
+      background-image: url('/images/LoadingPage-bg@3x.png');
+    }
+
+  .loadingContentWrap {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    @include px2rem(max-width, 890px);
+
+
+    .loadingTitle {
+      color: $title-color;
+      font-family: $text-font;
+      text-transform: uppercase;
+      margin: 0;
+      @include px2rem(font-size, 27px);
+      font-weight: 100;
+      line-height: 2.1;
+
+      &:first-child {
+        padding-bottom: 7.2vh;
+        line-height: 1;
+      }
+    }
+
+    .loaderWrap {
+      margin-bottom: 33vh;
+      @include px2rem(padding, 5px);
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#061d26+0,061d26+50,051a22+51,051a22+100 */
+      background: #061d26; /* Old browsers */
+      background: -moz-linear-gradient(top,  #061d26 0%, #061d26 50%, #051a22 51%, #051a22 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  #061d26 0%,#061d26 50%,#051a22 51%,#051a22 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  #061d26 0%,#061d26 50%,#051a22 51%,#051a22 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#061d26', endColorstr='#051a22',GradientType=0 ); /* IE6-9 */
+
+      border: 2px solid $title-color;
+      #inner-loader {
+        @include px2rem(height, 45px);
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#03b2ff+0,03b2ff+50,1ba1e3+51,1ba1e3+100 */
+        background: #03b2ff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #03b2ff 0%, #03b2ff 50%, #1ba1e3 51%, #1ba1e3 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #03b2ff 0%,#03b2ff 50%,#1ba1e3 51%,#1ba1e3 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #03b2ff 0%,#03b2ff 50%,#1ba1e3 51%,#1ba1e3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03b2ff', endColorstr='#1ba1e3',GradientType=0 ); /* IE6-9 */
+        border: none;
+        width: 0;
+      }
+    }
+  }
+  
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+}

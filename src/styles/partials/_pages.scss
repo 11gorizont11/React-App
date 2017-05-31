@@ -1,0 +1,44 @@
+.artist-list, .track-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  li{
+    padding: 10px;
+    font: 15px $fontOpen;
+    border-right: 1px solid $primaryColor;
+    .tracks-count{
+      font: 600 12px $fontOpen;
+    }
+    .fa{
+      font-size: 18px;
+      float: right;
+      cursor: pointer;
+    }
+  }
+}
+
+.wrapper{
+  display: table;
+  min-height: 350px;
+  width: 100%;
+  .inner{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.btn-save{
+  border-radius: 3px;
+  border: 1px solid $primaryColor;
+  box-shadow: none;
+  color: $primaryColor;
+  font-weight: 600;
+  width: 100%;
+  background-color: transparent;
+  text-transform: capitalize;
+  &:hover, &:focus{
+    color: white;
+    background-color: $primaryColor;
+  }
+}

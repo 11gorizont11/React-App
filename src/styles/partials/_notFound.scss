@@ -1,0 +1,15 @@
+
+.not-found {
+  color: #000;
+  display: table;
+  font-family: sans-serif;
+  font-size: 6.5rem;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+
+  .message {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin px2rem($property, $size) {
+  #{$property}: $size;
+  #{$property}: calculateRem($size);
+}
+
+@function calculateRem($size) {
+  $remSize: $size / $font-size;
+  @return #{$remSize}rem;
+}
+
+
+
