@@ -13,9 +13,9 @@ const Tracks = props =>{
           <h2>{artist.name}</h2>
         <ul className="track-list">
           {
-            artist.tracks.map(track => <li key={track._id} className="track">
+            artist.tracks.map(track => <li key={track._id} className="track" onClick={()=>addTrackToPlayList(track)}>
               {track.name} &nbsp;
-              <i className="fa fa-plus-square" onClick={()=>addTrackToPlayList(track)}/>
+              <i className="fa fa-plus-square"/>
             </li>)
           }
         </ul>
