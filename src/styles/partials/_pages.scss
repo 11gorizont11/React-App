@@ -7,6 +7,7 @@
     padding: 10px;
     font: 15px $fontOpen;
     border-right: 1px solid $primaryColor;
+    cursor: pointer;
     .tracks-count{
       font: 600 12px $fontOpen;
     }
@@ -17,7 +18,9 @@
     }
   }
 }
-
+.form-group{
+  margin: 20px auto;
+}
 .wrapper{
   display: table;
   min-height: 350px;

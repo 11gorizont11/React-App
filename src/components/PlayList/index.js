@@ -1,7 +1,7 @@
 import React, {PureComponent} from "react";
 import {connect} from "react-redux";
 import _ from "lodash";
-import {Alert, FormGroup, FormControl} from "react-bootstrap"
+import {Alert, FormGroup, FormControl, HelpBlock} from "react-bootstrap"
 import {removeTrackFromPlatList, requestCreatePlaylist, requestUpdatePlaylist, savePlaylistName} from "../../actions/playListAction";
 
 class PlayList extends PureComponent{
@@ -10,27 +10,50 @@ class PlayList extends PureComponent{
     super(props);
     this.state = {
       name: '',
-      showEditName: false
-    }
+      showEditName: false,
+      errors: {}
+    };
   }
 
+
   handleChangeName(ev){
-    this.setState({ name: ev.target.value });
+    const {name, value} = ev.target;
+    let {errors} = this.state;
+    let newState = {};
+    _.unset(errors, `${name}`);
+    if(value.length === 0){
+      _.set(newState, `errors.${name}`, "Playlist name can not be empty");
+    }
+    _.set(newState, name, value);
+    this.setState(newState);
   }
+
 
   render() {
     const {playList, removeTrackFromPlatList, handleSave, savePlaylistName} = this.props;
+    const {errors} =this.state;
     return  <div className="playlist">
       {
         this.state.showEditName ?
-          <FormGroup>
+          <FormGroup validationState={_.has(errors, "name")?"error": null} onKeyDown={
+            (ev)=>{
+              if(_.includes([ "Enter" ], ev.key)){
+                ev.preventDefault();
+                this.setState({showEditName: !this.state.showEditName},()=>savePlaylistName(this.state.name))
+              }
+            }
+          }>
             <FormControl
               type="text"
+              name="name"
               value={this.state.name}
               placeholder="Enter playlist Name"
               onChange={(ev)=>this.handleChangeName(ev)}
               onBlur={()=>this.setState({showEditName: !this.state.showEditName},()=>savePlaylistName(this.state.name))}
             />
+            {
+              _.has(errors, "name")&&<HelpBlock>{errors.name}</HelpBlock>
+            }
           </FormGroup>
           : <h2 onClick={()=>this.setState({showEditName: !this.state.showEditName})}>{playList.name} Playlist</h2>
       }
